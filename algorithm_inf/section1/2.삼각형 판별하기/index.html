@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+<body>
+
+</body>
+<script>
+    function mySolution(a, b, c) {// 제일 큰수 보다 나머지 두개의 값이 합이 더 커야 YES 작으면 NO 반환
+        let result;
+        if (a > b) {
+            if (a > c) {//a가 제일 큰경우
+                a > b + c ? result = "NO" : result = "YES";
+            } else { //c 가 제일 큰경우
+                c > a + b ? result = "NO" : result = "YES";
+            }
+        } else {
+            b > a + c ? result = "NO" : result = "YES";
+        }
+        return result;
+    }
+
+    function exampleSolution(a, b, c) {
+        let answer = "YES", max;
+        let sum = a + b + c;
+        if (a > b) max = a;
+        else max = b;
+        if (c > max) max = c;
+        if ((sum - max) <= max) answer = "NO"
+        return answer;
+    }
+
+    console.log(mySolution(6, 7, 11));
+    console.log(mySolution(13, 33, 17));
+    console.log(exampleSolution(6, 7, 11));
+    console.log(exampleSolution(13, 33, 17));
+</script>
+</html>
