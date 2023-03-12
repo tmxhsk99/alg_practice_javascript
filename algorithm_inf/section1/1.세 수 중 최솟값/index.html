@@ -13,8 +13,17 @@
         return a > b && c > b ? minValue = b : b > a && c > a ? minValue = a : minValue = c;
     }
     function exampleSolution(a,b,c){
-        let answ
+        let answser;
+        if(a < b){
+            answser = a;
+        }else{
+            answser = b;
+        }
+        if(answser > c){
+            answser = c;
+        }
+        return answser;
     }
-    console.log(solution(2, 5, 1));
+    console.log(exampleSolution(2, 5, 1));
 </script>
 </html>
