@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하세요.
+     * ▣ 입력설명
+     * 첫 번째 줄에 20이하의 자연수 N이 입력된다..
+     * ▣ 출력설명
+     * 첫 번째 줄에 1부터 N까지의 합을 출력한다.
+     *
+     */
+    function mySolution(n) {
+        let start = 1;
+        let tot = 0;
+        for(let i = 0 ; i < n-2 ; i++){
+            if(start + 1 > n ) {
+                return tot;}
+             tot += start + (start + 1)
+             start = start + 2;
+        }
+        return tot;
+
+    }
+
+    function exampleSolution(n) {
+        let answer=0;
+        for(let i=1; i<=n; i++){
+            answer=answer+i;
+        }
+
+        return answer;
+    }
+
+    console.log(mySolution(6));
+    console.log(mySolution(10));
+    console.log(exampleSolution(6));
+    console.log(exampleSolution(10));
+</script>
+</body>
+</html>
