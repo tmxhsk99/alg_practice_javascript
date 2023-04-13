@@ -3,7 +3,7 @@ package programmers.level2;
 
 import java.util.Arrays;
 
-public class triangleSnale_68645 {
+public class triangleSnale_68645_mySolution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
